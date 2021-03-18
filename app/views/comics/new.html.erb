@@ -1,0 +1,38 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with model: @comic, url:comics_path, local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        商品名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"20" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          商品の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :author, class:"items-text", id:"item-info", placeholder:"作者" ,maxlength:"20" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+  </footer>
+</div>
