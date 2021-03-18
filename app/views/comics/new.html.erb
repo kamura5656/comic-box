@@ -8,6 +8,7 @@
           <%= render 'shared/error_messages', model: f.object %>
 
     <%# 商品名と商品説明 %>
+    <%= f.file_field :image, id:"item-image" %>
     <div class="new-items">
       <div class="weight-bold-text">
         商品名

@@ -1,6 +1,7 @@
  <li class='list'>
    <%= link_to comic_path(comic.id) do %>
   <div>
+    <%= image_tag item.image, class: "item-img" %>
     <%= comic.title %>
     <%= comic.author %>
   </div>
