@@ -1,0 +1,5 @@
+
+  <%= link_to(new_comic_path, class: 'comic-shelf-btn') do %>
+    <span class='comic-shelf-btn-text'>本棚に追加する</span>
+  <% end %>
+<%= render partial: 'comics/comic', collection: @comics %>

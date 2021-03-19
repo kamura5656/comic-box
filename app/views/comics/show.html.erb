@@ -1,8 +1,9 @@
 <%= render "shared/header" %>
 
-<%# 商品の概要 %>
 <div class="item-show">
-      <%= @comic.title %>
+    <%= image_tag @comic.image, class: "comic-img" %>
+    <%= @comic.title %>
+    <%= @comic.author %>
   <div class="links">
     <a href="#" class="change-item-btn">
       ＜ 前の商品
