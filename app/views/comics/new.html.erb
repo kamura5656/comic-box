@@ -4,7 +4,7 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
-    <%= form_with model: @comic, url:comics_path, local: true do |f| %>
+    <%= form_with model: @comicshelf, url:comics_path, local: true do |f| %>
           <%= render 'shared/error_messages', model: f.object %>
 
     <%# 商品名と商品説明 %>
@@ -21,6 +21,13 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :author, class:"items-text", id:"item-info", placeholder:"作者" ,maxlength:"20" %>
+      </div>
+      <div class="shelfs-explain">
+        <div class="shelf-text">
+          本棚に追加
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.check_box :user_id, checked: current_user.id, unchecked: nil %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
