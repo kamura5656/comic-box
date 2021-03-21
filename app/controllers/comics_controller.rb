@@ -28,6 +28,6 @@ class ComicsController < ApplicationController
   end
 
   def shelf_params
-    params.require(:comic_shelf).permit(:image, :title, :author, :user_id)
+    params.require(:comic_shelf).permit(:image, :title, :author, :user_id, :volume)
   end
 end

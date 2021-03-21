@@ -3,9 +3,6 @@
 <%= render "boxes/sideber" %>
 
 <div class="items-sell-contents">
-  <header class="items-sell-header">
-
-  </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
     <%= form_with model: @comicshelf, url:comics_path, local: true do |f| %>
@@ -26,6 +23,13 @@
         </div>
         <%= f.text_area :author, class:"items-text", id:"item-info", placeholder:"作者" ,maxlength:"20" %>
       </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          商品の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.number_field :volume, class:"volume-text", id:"volume-info", placeholder:"1" %>
+      </div>
       <div class="shelfs-explain">
         <div class="shelf-text">
           本棚に追加
@@ -45,8 +49,7 @@
   </div>
   <% end %>
 
-  <footer class="items-sell-footer">
-  </footer>
+
 </div>
 </div>
 <%= render "shared/footer" %>

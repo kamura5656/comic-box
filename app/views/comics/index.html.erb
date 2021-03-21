@@ -1,7 +1,8 @@
 <%= render "shared/header" %>
 <div class='main-contents'>
-  <div class='side-contents'>
   <%= render "boxes/sideber" %>
+  <div class='side-contents'>
+    <%= render partial: 'comic', collection: @comics %>
   </div>
 </div>
 
