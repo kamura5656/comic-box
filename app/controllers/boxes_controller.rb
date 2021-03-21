@@ -4,18 +4,26 @@ class BoxesController < ApplicationController
   end
 
   def create
-
+    @box = Box.new(shelf_params)
+    if @box.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
   end
 
   def show
-    @comics = Comic.all.order('created_at DESC')
+    @boxes = Box.all.order('created_at DESC')
   end
 
   private
 
+  def shelf_params
+    params.require(:comic).permit(:title)
+  end
 
 end
 

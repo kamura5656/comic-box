@@ -10,7 +10,7 @@ class ComicsController < ApplicationController
   end
 
   def create
-    @comicshelf = ComicShelf.new(box_params)
+    @comicshelf = ComicShelf.new(shelf_params)
     if @comicshelf.save
       redirect_to root_path
     else
@@ -27,7 +27,7 @@ class ComicsController < ApplicationController
     @comic = Comic.find(params[:comic_id])
   end
 
-  def box_params
+  def shelf_params
     params.require(:comic_shelf).permit(:image, :title, :author, :user_id)
   end
 end

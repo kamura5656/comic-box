@@ -1,0 +1,15 @@
+<div class='side-bar'>
+  <% if user_signed_in? %>
+    <%= link_to(new_comic_path, class: 'purchase-btn') do %>
+      <span class='purchase-btn-text'>出品する</span>
+    <% end %>
+  <% else %>
+    <%= link_to(new_user_session_path, class: 'purchase-btn') do %>
+      <span class='purchase-btn-text'>出品する</span>
+    <% end %>
+  <% end %>
+
+  <%= link_to(box_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>本棚へ</span>
+  <% end %>
+</div>

@@ -1,3 +1,6 @@
-<%= form_with model: @shelf, url:shelfs_path, local: true do |f| %>
-<% form.search_field :title %>
+工事中（検索結果から本棚に追加する機能実装予定）
+<%= form_with model: @comic, url:box_path, local: true do |f| %>
+  <%= f.label :title, "タイトル" %>
+  <%= f.search_field :title_cont, onsearch: true %>
+  <%= f.submit "検索" %>
 <% end %>

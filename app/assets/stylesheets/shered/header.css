@@ -1,0 +1,53 @@
+.top-page-header {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: darkkhaki;
+}
+
+.logo-space {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: coral;
+}
+
+.login {
+  float: left;
+  display: flex;
+  padding-right: 10px;
+}
+
+.login-lists {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}

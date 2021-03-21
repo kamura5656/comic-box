@@ -1,4 +1,6 @@
 <%= render "shared/header" %>
+<div class='main-contents'>
+<%= render "boxes/sideber" %>
 
 <div class="item-show">
     <%= image_tag @comic.image, class: "comic-img" %>
@@ -14,5 +16,5 @@
   </div>
   <a href="#" class="another-item"><%=  %>をもっと見る</a>
 </div>
-
+</div>
 <%= render "shared/footer" %>
