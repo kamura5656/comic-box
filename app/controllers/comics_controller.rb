@@ -22,6 +22,10 @@ class ComicsController < ApplicationController
     @comic = Comic.find(params[:id])
   end
 
+  def search
+    @comics = Comic.search(params[:keyword])
+  end
+
   private
   def params_find
     @comic = Comic.find(params[:comic_id])

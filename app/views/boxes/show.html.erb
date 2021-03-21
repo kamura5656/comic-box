@@ -2,10 +2,8 @@
 <div class='main-contents'>
   <%= render "boxes/sideber" %>
 
-  <%= link_to(new_box_path, class: 'comic-shelf-btn') do %>
-    <span class='comic-shelf-btn-text'>本棚に追加する本を探す</span>
-  <% end %>
-  
+
+
   <%= render partial: 'box', collection: @boxes %>
 
   </div>

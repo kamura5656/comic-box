@@ -5,4 +5,12 @@ class Comic < ApplicationRecord
   with_options presence: true do
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Comic.where('title LIKE(?)', "%#{search}%")
+    else
+      Comic.all
+    end
+  end
 end

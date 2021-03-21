@@ -1,15 +1,25 @@
 <div class='side-bar'>
-  <% if user_signed_in? %>
-    <%= link_to(new_comic_path, class: 'sidebar-btn') do %>
-      <span class='sidebar-btn-text'>漫画を追加</span>
-    <% end %>
-  <% else %>
-    <%= link_to(new_user_session_path, class: 'sidebar-btn') do %>
-      <span class='sidebar-btn-text'>漫画を追加</span>
-    <% end %>
-  <% end %>
-
-  <%= link_to(box_path, class: 'sideber-btn') do %>
-    <span class='sidebar-btn-text'>本棚へ</span>
-  <% end %>
+  <ul>
+    <li>
+      <% if user_signed_in? %>
+        <%= link_to(new_comic_path, class: 'sidebar-btn') do %>
+          <span class='sidebar-btn-text'>漫画を追加</span>
+        <% end %>
+      <% else %>
+        <%= link_to(new_user_session_path, class: 'sidebar-btn') do %>
+          <span class='sidebar-btn-text'>漫画を追加</span>
+        <% end %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to(search_comics_path, class: 'comic-shelf-btn') do %>
+        <span class='comic-shelf-btn-text'>本棚に追加する本を探す</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to(box_path, class: 'sideber-btn') do %>
+        <span class='sidebar-btn-text'>本棚へ</span>
+      <% end %>
+    </li>
+  </ul>
 </div>
