@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  root to: "comics#index"
+  resources :comics, only: [:new, :create, :show] do
+    collection do
+      get 'search'
+    end
+  end
+  get 'boxes/index'
+  resources :boxes, only: [:new, :create, :destroy, :show] do
+    collection do
+      get 'search'
+    end
+  end
 end

@@ -1,0 +1,59 @@
+.all-contents {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.comic-img {
+  width: 150px;
+  height: 150px;
+}
+
+.central-contents {
+}
+
+.main-contents {
+  width: calc(100vw - 120px);
+  height: calc(100vh - 160px);
+  overflow-x: auto; 
+}
+
+.list-comic {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.logo-space {
+  width: 120px;
+  height: 80px;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-lists {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+.sidebar-contents {
+  background-color: brown;
+  width: 120px;
+  height: calc(100vh - 160px);
+}
+
+.side-footer {
+  background-color: cornflowerblue;
+  height: 80px;
+}
