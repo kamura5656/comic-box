@@ -4,6 +4,7 @@ class CreateBoxes < ActiveRecord::Migration[6.0]
       t.references  :user       , foreugn_key: true
       t.references  :comic      , foreugn_key: true
       t.integer     :status_id 
+      t.text        :comment
 
       t.timestamps
     end

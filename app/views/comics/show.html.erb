@@ -9,7 +9,7 @@
           <%= @comic.title %>
           <%= @comic.author %>
           <%= form_with model: @box, url: boxes_path, local: true, method: :post, class: "search-form" do |form| %>
-          <%= form.check_box :comic_ids, {}, @comic.id, :nil %>
+          <%= form.check_box :comic_id, {}, @comic.id, :nil %>
           <%= form.submit "本棚に追加", class: "search-btn" %> 
           <% end %>
       </div>

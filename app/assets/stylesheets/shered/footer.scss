@@ -1,5 +1,6 @@
 .top-footer {
   background-color: blueviolet;
   height: 80px;
-  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
 }

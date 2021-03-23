@@ -10,8 +10,8 @@ class BoxesController < ApplicationController
   end
 
   def create
-    @box = Box.new(box_params)
-    if @box.save
+    @box = Box.create(box_params)
+    if @box.valid?
       redirect_to root_path
     else
       render :new
@@ -19,17 +19,24 @@ class BoxesController < ApplicationController
   end
 
   def destroy
+    @box = Box.find(params[:id])
+    @box.destroy
+    redirect_to search_boxes_path
   end
 
   def show
     @box = Box.find(params[:id])
   end
 
+  def search
+    @boxes = Box.search(params[:keyword])
+  end
 
   private
 
   def box_params   
-    params.require(:box).permit(:comic_id).merge(user_id: current_user.id)
+    params.permit(:comic_id).merge(user_id: current_user.id)
   end
+
 end
 

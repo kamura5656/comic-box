@@ -5,7 +5,7 @@
     <div class='main-contents'>
 
       <%= form_with model: @comic, url: search_comics_path, local: true, method: :get, class: "search-form" do |form| %>
-        <%= form.text_field :keyword, placeholder: "タイトルで検索する", class: "search-input" %>
+        <%= form.text_field :keyword, placeholder: "題または作者名を入力", class: "search-input" %>
         <%= form.submit "検索", class: "search-btn" %>
       <% end %>
 

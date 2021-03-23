@@ -13,7 +13,7 @@ class ComicsController < ApplicationController
   def create
     @comicshelf = ComicShelf.new(shelf_params)
     if @comicshelf.save
-      redirect_to root_path
+      redirect_to new_comic_path
     else
       render :new
     end
@@ -24,7 +24,6 @@ class ComicsController < ApplicationController
   end
 
   def search
-    @box = Box.new
     @comics = Comic.search(params[:keyword])
   end
 

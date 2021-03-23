@@ -7,5 +7,9 @@ Rails.application.routes.draw do
     end
   end
   get 'boxes/index'
-  resources :boxes, only: [:new, :create, :destroy, :show]
+  resources :boxes, only: [:new, :create, :destroy, :show] do
+    collection do
+      get 'search'
+    end
+  end
 end

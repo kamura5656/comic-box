@@ -1,8 +1,8 @@
 .top-page-header {
-  width: 100vw;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: flex-end;
   background-color: darkkhaki;
 }
 
