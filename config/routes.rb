@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resource :box, only: [:new, :create, :destroy, :show]
+  get 'boxes/index'
+  resources :boxes, only: [:new, :create, :destroy, :show]
 end

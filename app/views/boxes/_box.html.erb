@@ -1,7 +1,10 @@
- <li class='list'>
-  <div>
-    <%= image_tag box.comic.image, class: "comic-img" %>
-    <%= box.comic.title %>
-    <%= box.comic.author %>
-  </div>
+ <li class='show-contents'>
+  <%= link_to box_path(box.id), class: 'comic-show-btn' do %>
+    <div>
+      <%= image_tag box.comic.image, class: "comic-img" %>
+      <%= box.comic.title %>
+      <%= box.comic.author %>
+      <%= box.comic.volume %>
+    </div>
+  <% end %>
 </li>

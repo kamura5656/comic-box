@@ -1,10 +1,18 @@
-<%= render "shared/header" %>
-<div class='main-contents'>
+<div class='all-contents'>
   <%= render "boxes/sideber" %>
-  <div class='side-contents'>
-    <%= render partial: 'comic', collection: @comics %>
+  <div class='central-contents'>
+    <%= render "shared/header" %>
+    <div class='main-contents'>
+
+      <ul class='list-comic'>
+        <%= render partial: 'comic', collection: @comics %>
+      </ul>
+
+    </div>
+    <%= render "shared/footer" %>
   </div>
 </div>
 
 
-<%= render "shared/footer" %>
+
+

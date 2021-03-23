@@ -2,18 +2,7 @@
 <div class='main-contents'>
   <%= render "boxes/sideber" %>
 
-工事中（検索結果から本棚に追加する機能実装予定）
 
-<%= form_with(url: search_comics_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
-
-<%= form_with model: @comic, url:box_path, local: true do |f| %>
-  <%= f.label :title, "タイトル" %>
-  <%= f.search_field :title_cont, onsearch: true %>
-  <%= f.submit "検索" %>
-<% end %>
 
   </div>
 <%= render "shared/footer" %>

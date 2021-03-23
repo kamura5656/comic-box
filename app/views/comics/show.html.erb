@@ -1,20 +1,22 @@
-<%= render "shared/header" %>
-<div class='main-contents'>
-<%= render "boxes/sideber" %>
+<div class='all-contents'>
+  <%= render "boxes/sideber" %>
+  <div class='central-contents'>
+    <%= render "shared/header" %>
+    <div class='main-contents'>
 
-<div class="item-show">
-    <%= image_tag @comic.image, class: "comic-img" %>
-    <%= @comic.title %>
-    <%= @comic.author %>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
+      <div class="contents-in">
+          <%= image_tag @comic.image, class: "comic-show-img" %>
+          <%= @comic.title %>
+          <%= @comic.author %>
+          <%= form_with model: @box, url: boxes_path, local: true, method: :post, class: "search-form" do |form| %>
+          <%= form.check_box :comic_ids, {}, @comic.id, :nil %>
+          <%= form.submit "本棚に追加", class: "search-btn" %> 
+          <% end %>
+      </div>
+
+
+
+    </div>
+    <%= render "shared/footer" %>
   </div>
-  <a href="#" class="another-item"><%=  %>をもっと見る</a>
 </div>
-</div>
-<%= render "shared/footer" %>

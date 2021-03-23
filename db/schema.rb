@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_03_19_060754) do
   create_table "boxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "comic_id"
+    t.integer "status_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["comic_id"], name: "index_boxes_on_comic_id"

@@ -1,9 +1,11 @@
  <li class='list'>
-     <%= link_to comic_path(comic.id), class: 'comic-show-btn' do %>
-  <div>
-    <%= image_tag comic.image, class: "comic-img" %>
-    <%= comic.title %>
-    <%= comic.author %>
+  <div class='comic-contents'>
+       <%= link_to comic_path(comic.id), class: 'comic-show-btn' do %>
+    <div>
+      <%= image_tag comic.image, class: "comic-img" %>
+      <%= comic.title %>
+      <%= comic.author %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </li>

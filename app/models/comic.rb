@@ -13,4 +13,5 @@ class Comic < ApplicationRecord
       Comic.all
     end
   end
+
 end

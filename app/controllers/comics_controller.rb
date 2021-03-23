@@ -7,6 +7,7 @@ class ComicsController < ApplicationController
 
   def new
     @comicshelf = ComicShelf.new
+    @box = Box.new
   end
 
   def create
@@ -23,15 +24,16 @@ class ComicsController < ApplicationController
   end
 
   def search
+    @box = Box.new
     @comics = Comic.search(params[:keyword])
   end
 
   private
   def params_find
-    @comic = Comic.find(params[:comic_id])
+    @comic = Comic.find(params[:id])
   end
 
   def shelf_params
-    params.require(:comic_shelf).permit(:image, :title, :author, :user_id, :volume)
+    params.require(:comic_shelf).permit(:image, :title, :author, :user_ids, :volume, :status_id)
   end
 end
