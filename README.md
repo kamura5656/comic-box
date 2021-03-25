@@ -83,6 +83,7 @@
 
 ## git clone
 - git clone https://github.com/kamura5656/comic-box.git
+- ruby _6.0.0_
 
 
 ## usersテーブル 
