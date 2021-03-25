@@ -1,6 +1,6 @@
 class Status < ActiveHash::Base
   self.data = [
-    { id: 1, name: '状態' },
+    { id: 1, name: '状態未選択' },
     { id: 2, name: '未読' },
     { id: 3, name: '所持' },
     { id: 4, name: '既読だが未所持' },
@@ -9,5 +9,5 @@ class Status < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :boxes
+  belongs_to :box
 end

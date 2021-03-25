@@ -3,7 +3,7 @@ class CreateBoxes < ActiveRecord::Migration[6.0]
     create_table :boxes do |t|
       t.references  :user       , foreugn_key: true
       t.references  :comic      , foreugn_key: true
-      t.integer     :status_id 
+      t.integer     :status_id  ,        null: false
       t.text        :comment
 
       t.timestamps

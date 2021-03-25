@@ -1,6 +1,7 @@
 class Box < ApplicationRecord
   belongs_to :user
   belongs_to :comic 
+  belongs_to :status
 
 
   def self.search(search)

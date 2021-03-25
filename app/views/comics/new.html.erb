@@ -4,30 +4,30 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
-    <div class="items-sell-main">
-      <h2 class="items-sell-title">漫画の情報を入力</h2>
+    <div class="comics-add-main">
+      <h2 class="comics-add-title">漫画の情報を入力</h2>
       <%= form_with model: @comicshelf, url:comics_path, local: true do |f| %>
             <%= render 'shared/error_messages', model: f.object %>
       <%= f.file_field :image, id:"item-image" %>
-      <div class="new-items">
+      <div class="new-comics">
         <div class="weight-bold-text">
           タイトル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"20" %>
+        <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル", maxlength:"20" %>
         <div class="items-explain">
           <div class="weight-bold-text">
             作者名
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_area :author, class:"items-text", id:"item-info", placeholder:"作者" ,maxlength:"20" %>
+          <%= f.text_area :author, class:"items-text", id:"item-info", placeholder:"作者名" ,maxlength:"10" %>
         </div>
         <div class="items-explain">
           <div class="weight-bold-text">
             巻数
             <span class="indispensable">必須</span>
           </div>
-          <%= f.number_field :volume, class:"volume-text", id:"volume-info", placeholder:"1" %>
+          <%= f.number_field :volume, class:"volume-text", id:"volume-info", placeholder:"1", :size=>"60"%>
         </div>
         <div class="shelfs-explain">
           <div class="shelf-text">
