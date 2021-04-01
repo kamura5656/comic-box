@@ -95,7 +95,7 @@
 
 
 ##Associstion
-- belongs_to :boxes, optional: true
+- has_one :box, optional: true
 
 ## comicsテーブル
 | Culumn           | Type          | Options                        | 
