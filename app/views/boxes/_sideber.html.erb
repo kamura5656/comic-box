@@ -7,7 +7,7 @@
   </header>
   <div class='sidebar-contents'>
     <ul>
-      <li>
+      <li class='sidebar-link'>
         <% if user_signed_in? %>
           <%= link_to(new_comic_path, class: 'sidebar-btn') do %>
             <span class='sidebar-btn-text'>漫画を追加</span>
@@ -18,12 +18,12 @@
           <% end %>
         <% end %>
       </li>
-      <li>
-        <%= link_to(search_comics_path, class: 'comic-shelf-btn') do %>
-          <span class='comic-shelf-btn-text'>本棚に追加する本を探す</span>
+      <li class='sidebar-link'>
+        <%= link_to(search_comics_path, class: 'sidebar-btn') do %>
+          <span class='sidebar-btn-text'>漫画を探す</span>
         <% end %>
       </li>
-      <li>
+      <li class='sidebar-link'>
         <%= link_to(boxes_index_path, class: 'sideber-btn') do %>
           <span class='sidebar-btn-text'>本棚へ</span>
         <% end %>

@@ -4,18 +4,27 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
-      <div class="contents-in">
-          <%= image_tag @comic.image, class: "comic-show-img" %>
-          <%= @comic.title %>
-          <%= @comic.author %>
-          <%= form_with model: @box, url: boxes_path, local: true, method: :post, class: "search-form" do |form| %>
-          <%= form.check_box :comic_id, {}, @comic.id, :nil %>
-          <%= form.submit "本棚に追加", class: "search-btn" %> 
-          <% end %>
+      <div class='main-contents-shere'>
+        <div class="contents-in">
+         <div class="contents-image">
+            <%= image_tag @comic.image, class: "comic-show-img" %>
+                    </div>
+          <div class="contents-info">
+            <div class="contents-title">
+              <h1 class="contents-bigtitle">タイトル</h1>
+              <span class="content-show"><%= @comic.title %></span>
+            </div>
+            <div class="contents-title">
+              <h1 class="contents-bigtitle">作者</h1>
+              <span class="content-show"><%= @comic.author %></span>
+            </div>
+            <%= form_with model: @box, url: boxes_path, local: true, method: :post, class: "comicshelf-add" do |form| %>
+              <%= form.check_box :comic_id, {}, @comic.id, :nil %>
+              <%= form.submit "本棚に追加する", class: "comicshelf-btn" %>  
+            <% end %>
+          </div>
+        </div>
       </div>
-
-
-
     </div>
     <%= render "shared/footer" %>
   </div>

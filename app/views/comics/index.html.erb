@@ -4,9 +4,24 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
+    <% unless user_signed_in? %>
+      <h2 class="comics-add-title">ComicBoxを使ってみましょう</h2>
+      <span class="first-message">ComicBoxは漫画を登録し、あなただけの本棚を作れるサービスです。</span>
+      <div class="first-page-signup">
+        <%=link_to '登録してサービスの利用を開始する', new_user_session_path, class:"first-signup-btn" %>
+      </div>
+    <% end %>
+
+
+    <div class='serch-form-space'>
+    最近登録された漫画一覧
+    </div>
+
+    <div class='main-contents-shere'>   
       <ul class='list-comic'>
         <%= render partial: 'comic', collection: @comics %>
       </ul>
+    </div>
 
     </div>
     <%= render "shared/footer" %>

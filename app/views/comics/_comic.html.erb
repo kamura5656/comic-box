@@ -3,15 +3,16 @@
     <%= link_to comic_path(comic.id), class: 'comic-show-btn' do %>
     <%= image_tag comic.image, class: "comic-img" %>
     <div class='comic-info'>
-      <div class='comic-title'>
+      <div class='comic-infomation'>
         <%= comic.title %>
       </div>
-      <div class='comic-title'>
-        <%= comic.author %>
+      <div class='comic-infomation'>
+      <%= comic.author %>
       </div>
-      <div class='comic-title'>
-        <%= comic.volume %>
+      <div class='comic-infomation'>
+        <%= comic.volume %><a> 巻 </a>
       </div>
+      <%# <%= form.check_box :comic_id, {}, comic.id, :nil %> 
     </div>
     <% end %>
   </div>

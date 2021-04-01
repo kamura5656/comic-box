@@ -10,8 +10,8 @@ class BoxesController < ApplicationController
   end
 
   def create
-    @box = Box.create(box_params)
-    if @box.valid?
+    @box = Box.new(box_params)
+    if @box.save
       redirect_to root_path
     else
       render :new
@@ -28,6 +28,16 @@ class BoxesController < ApplicationController
     @box = Box.find(params[:id])
   end
 
+  def update
+    @box = Box.find(params[:id])
+    @box.update(comment_params)
+    if @box.save
+      redirect_to box_path
+    else
+      render :show
+    end
+  end
+
   def search
     @boxes = Box.search(params[:keyword])
   end
@@ -36,6 +46,10 @@ class BoxesController < ApplicationController
 
   def box_params   
     params.permit(:comic_id).merge(user_id: current_user.id)
+  end
+
+  def comment_params
+    params.require(:box).permit(:comment)
   end
 
 end

@@ -9,5 +9,5 @@ class Status < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  belongs_to :box
+  has_many :boxes
 end

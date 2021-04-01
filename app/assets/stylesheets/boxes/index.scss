@@ -20,16 +20,11 @@
   flex-wrap: wrap;
 }
 
-.title-log-btn {
-  text-decoration: none;
-  color: black;
-  font: bold 20px serif;
-}
 
 .logo-space {
   width: 120px;
   height: 80px;
-  background-color:tomato;
+  background-color: coral;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,16 +45,13 @@
 }
 
 .sidebar-contents {
-  background-color:  coral;
+  background-color: brown;
   width: 120px;
   height: calc(100vh - 160px);
-  flex-direction: column;
-  color: black;
-
 }
 
 .side-footer {
-  background-color:blueviolet;
+  background-color: cornflowerblue;
   height: 80px;
 }
 
@@ -73,8 +65,6 @@
 
 .comic-contents {
   border: 1px solid dimgray;
-  box-shadow: 1px
-  ma
 }
 
 .serch-form-space {
@@ -82,40 +72,57 @@
 
 }
 
-.sidebar-link {
-  padding: 5px;
-  font-style: italic;
-  font-size: large;
-  text-decoration: none;
+.comic-new-space {
+  margin: 10px 0 0 10px;
 }
 
-.sidebar-btn-text {
-  color: black;
-  text-decoration: none;
+.contents-in {
+  display: flex;
 }
 
-.volume-text[type="number"] {
-    width: 30px;
-    height: 20px;
+.contents-image {
+  margin: 30px;
 }
 
-.comic-infomation a {
-  text-decoration: none;
-  color:black;
-}
-
-.comic-info a {
-  text-decoration: none;
-  color:black;
-}
-
-.comics-add-title {
+.contents-title {
   font-size: larger;
-  border-bottom: #333333 solid 1px;
+
   padding: 5px;
   margin: 20px;
 }
 
-.weight-bold-text {
-  padding: 5px;
+.contents-bigtitle {
+  font-size: large;
+  border-bottom: #333333 solid 1px;
+  font-family:'Courier New', Courier, monospace
+}
+
+.contents-bigtitle::first-letter {
+  font-size: 35px;
+}
+
+.comment-text {
+  margin-left: 30px;  
+}
+
+.content-show {
+  padding: 20px;
+  line-break: auto;
+}
+
+.box-destroy {
+  font-style:oblique;
+  background-color: red;
+}
+
+.comicshelf-add {
+  margin: 20px;
+}
+
+.first-message {
+  margin: 20px;
+}
+
+.first-page-signup {
+margin: 50px;
 }

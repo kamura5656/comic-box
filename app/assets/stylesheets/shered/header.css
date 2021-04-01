@@ -3,7 +3,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: darkkhaki;
+  background-color: darksalmon;
 }
 
 .logout {
@@ -16,6 +16,9 @@
   line-height: 32px;
   margin-right: 3vw;
   color: #333333;
+}
+
+.login-lists {
 }
 
 .sign-up {
