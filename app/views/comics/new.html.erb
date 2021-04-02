@@ -25,18 +25,18 @@
             <div class="weight-bold-text">
               巻数
             </div>
-            <%= f.number_field :volume, class:"volume-text", id:"volume-info", placeholder:"1" %>
+            <%= f.number_field :volume, class:"volume-text", id:"volume-info", placeholder:"1", value:"1" %>
           </div>
           <div class="shelfs-explain">
             <div class="shelf-text">
               同時に本棚に追加する場合はチェック
             </div>
             <%= f.check_box :user_ids, {checked: true}, current_user.id, :nil %>
-            <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+            <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"select-box", id:"comic-prefecture"}) %>
           </div>
         </div>
         <div class="sell-btn-contents">
-          <%= f.submit "登録" ,class:"sell-btn" %>
+          <%= f.submit "登録" ,class:"comicadd-btn" %>
           <%=link_to 'もどる', root_path, class:"back-btn" %>
         </div>
         </div>

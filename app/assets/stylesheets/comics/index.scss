@@ -1,6 +1,7 @@
 .all-contents {
   display: flex;
   box-sizing: border-box;
+  background-color:#CDCDC0;
 }
 
 .comic-img {
@@ -20,37 +21,22 @@
   flex-wrap: wrap;
 }
 
-.title-log-btn {
-  text-decoration: none;
-  color: black;
-  font: bold 20px serif;
-}
-
 .logo-space {
   width: 120px;
   height: 80px;
-  background-color:red;
+  background-color:#B38867;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-lists {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
+.comic-icon {
+  width: 100px;
+  height: 100px;
 }
 
 .sidebar-contents {
-  background-color:  coral;
+  background-color:#DDBC95;
   width: 120px;
   height: calc(100vh - 160px);
   flex-direction: column;
@@ -59,7 +45,7 @@
 }
 
 .side-footer {
-  background-color:blueviolet;
+  background-color:#B38867;
   height: 80px;
 }
 
@@ -74,19 +60,22 @@
 .comic-contents {
   border: 1px solid dimgray;
   box-shadow: 1px
-  ma
 }
 
 .serch-form-space {
   padding: 20px;
-
 }
 
 .sidebar-link {
-  padding: 5px;
+  padding: 5px 15px;
   font-style: italic;
   font-size: large;
   text-decoration: none;
+}
+
+.sidebar-btn {
+  text-decoration: none;
+  border-bottom:1px solid #333333 ;
 }
 
 .sidebar-btn-text {
@@ -119,3 +108,9 @@
 .weight-bold-text {
   padding: 5px;
 }
+
+.list {
+  background-color: white;
+}
+
+

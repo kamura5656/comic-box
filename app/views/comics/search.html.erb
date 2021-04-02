@@ -4,9 +4,10 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
+      <h2 class="comics-add-title">漫画を探す</h2>
       <div class='serch-form-space'>
         <%= form_with model: @comic, url: search_comics_path, local: true, method: :get, class: "search-form" do |form| %>
-          <%= form.text_field :keyword, placeholder: "題または作者名を入力", class: "search-input" %>
+          <%= form.text_field :keyword, placeholder: "題または作者名を入力", class: "search-input", size: 40 %>
           <%= form.submit "検索", class: "search-btn" %>
         <% end %>
       </div>

@@ -6,9 +6,9 @@
 
       <div class='main-contents-shere'>
         <div class="contents-in">
-         <div class="contents-image">
+          <div class="contents-image">
             <%= image_tag @comic.image, class: "comic-show-img" %>
-                    </div>
+          </div>
           <div class="contents-info">
             <div class="contents-title">
               <h1 class="contents-bigtitle">タイトル</h1>
@@ -24,6 +24,7 @@
             <% end %>
           </div>
         </div>
+        <%=link_to 'もどる', search_boxes_path, class:"back-btn" %>
       </div>
     </div>
     <%= render "shared/footer" %>

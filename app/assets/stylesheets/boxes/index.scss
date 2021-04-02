@@ -18,8 +18,12 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
+.list {
+  margin: 0 5px;
+}
 
 .logo-space {
   width: 120px;
@@ -28,20 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.login-lists {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
 }
 
 .sidebar-contents {
@@ -65,6 +55,8 @@
 
 .comic-contents {
   border: 1px solid dimgray;
+  background-color: white;
+  position: relative;
 }
 
 .serch-form-space {
@@ -86,7 +78,6 @@
 
 .contents-title {
   font-size: larger;
-
   padding: 5px;
   margin: 20px;
 }
@@ -112,7 +103,12 @@
 
 .box-destroy {
   font-style:oblique;
-  background-color: red;
+  background-color: #F4EC6A;
+  padding: 1px;
+  position: absolute; 
+  top: 200px;
+  left: 50px;
+  border-radius: 8px;
 }
 
 .comicshelf-add {
@@ -124,5 +120,10 @@
 }
 
 .first-page-signup {
-margin: 50px;
+  margin: 50px;
 }
+
+.back-btn {
+  margin-left: 25px;
+}
+

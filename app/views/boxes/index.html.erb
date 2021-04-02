@@ -4,6 +4,7 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
+      <h2 class="comics-add-title">さんの本棚</h2>
       <%# <% 検索フォーム %> 
       <div class='serch-form-space'>
       <%= form_with model: @box, url: search_boxes_path, local: true, method: :get, class: "search-form" do |form| %>

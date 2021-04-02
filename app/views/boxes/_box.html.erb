@@ -1,18 +1,20 @@
- <li class='comic-contents'>
-  <%= link_to box_path(box.id), class: 'comic-show-btn' do %>
-    <%= image_tag box.comic.image, class: "comic-img" %>
-    <div class='comic-info'>
-      <div class='comic-infomation'>
-        <%= box.comic.title %>
+<li class='list'>
+  <div class='comic-contents'>
+    <%= link_to box_path(box.id), class: 'comic-show-btn' do %>
+      <%= image_tag box.comic.image, class: "comic-img" %>
+      <div class='comic-info'>
+        <div class='comic-infomation'>
+          <%= box.comic.title %>
+        </div>
+        <div class='comic-infomation'>
+          <%= box.comic.author %>
+        </div>
+        <div class='comic-infomation'>
+          <%= box.comic.volume %><a> 巻 </a>
+          <%= button_to "本棚から削除", box_path(box.id), method: :delete, class: 'box-destroy' %>
+        </div>
       </div>
-      <div class='comic-infomation'>
-        <%= box.comic.author %>
-      </div>
-      <div class='comic-infomation'>
-        <%= box.comic.volume %><a> 巻 </a>
-      </div>
-      <%= link_to "本棚から削除する", box_path(box.id), method: :delete, class:"box-destroy" %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </li>
 
