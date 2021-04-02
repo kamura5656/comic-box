@@ -7,7 +7,6 @@ class ComicsController < ApplicationController
 
   def new
     @comicshelf = ComicShelf.new
-    @box = Box.new
   end
 
   def create

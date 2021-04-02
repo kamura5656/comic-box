@@ -4,15 +4,40 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
+    <div class='main-contents-shere'>
       <div class="contents-in">
+        <div class="contents-image">
           <%= image_tag @box.comic.image, class: "comic-show-img" %>
-          <%= @box.comic.title %>
-          <%= @box.comic.author %>
-        <div class="links">
+        </div>
+        <div class="contents-info">
+          <div class="contents-title">
+          <h1 class="contents-bigtitle">タイトル</h1>
+            <span class="content-show"><%= @box.comic.title %></span>
+          </div>
+          <div class="contents-title">
+            <h1 class="contents-bigtitle">作者</h1>
+            <span class="content-show"><%= @box.comic.author %></span>
+          </div>
+          <div class="contents-title">
+            <h1 class="contents-bigtitle">メモ</h1>
+            <div class="comments-space">
+              <span class="content-show"><%= @box.comment %></span>
+            </div>
+          </div>
+          <%# <%= @box.status.name %> 
         </div>
       </div>
+      <% if user_signed_in? && current_user.id == @box.user_id %>
+        <%= form_with model: @box, url:box_path, local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+          <%= f.text_area :comment, class:"comment-text", id:"comment-text", placeholder:"メモが書き込めます" %>
+          <%= f.submit "メモを更新", class: "comment-btn" %>
+        <% end %>
+      <% end %>
+    </div>
+    <%=link_to 'もどる', search_boxes_path, class:"back-btn" %>
 
     </div>
     <%= render "shared/footer" %>
   </div>
-</div>
+</div

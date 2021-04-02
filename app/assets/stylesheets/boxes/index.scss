@@ -1,0 +1,129 @@
+.all-contents {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.comic-img {
+  width: 150px;
+  height: 150px;
+}
+
+.main-contents {
+  width: calc(100vw - 120px);
+  height: calc(100vh - 160px);
+  overflow-x: auto; 
+}
+
+.list-comic {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.list {
+  margin: 0 5px;
+}
+
+.logo-space {
+  width: 120px;
+  height: 80px;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-contents {
+  background-color: brown;
+  width: 120px;
+  height: calc(100vh - 160px);
+}
+
+.side-footer {
+  background-color: cornflowerblue;
+  height: 80px;
+}
+
+.comics-add-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2vh 0 0 2vw;
+}
+
+.comic-contents {
+  border: 1px solid dimgray;
+  background-color: white;
+  position: relative;
+}
+
+.serch-form-space {
+  padding: 20px;
+
+}
+
+.comic-new-space {
+  margin: 10px 0 0 10px;
+}
+
+.contents-in {
+  display: flex;
+}
+
+.contents-image {
+  margin: 30px;
+}
+
+.contents-title {
+  font-size: larger;
+  padding: 5px;
+  margin: 20px;
+}
+
+.contents-bigtitle {
+  font-size: large;
+  border-bottom: #333333 solid 1px;
+  font-family:'Courier New', Courier, monospace
+}
+
+.contents-bigtitle::first-letter {
+  font-size: 35px;
+}
+
+.comment-text {
+  margin-left: 30px;  
+}
+
+.content-show {
+  padding: 20px;
+  line-break: auto;
+}
+
+.box-destroy {
+  font-style:oblique;
+  background-color: #F4EC6A;
+  padding: 1px;
+  position: absolute; 
+  top: 200px;
+  left: 50px;
+  border-radius: 8px;
+}
+
+.comicshelf-add {
+  margin: 20px;
+}
+
+.first-message {
+  margin: 20px;
+}
+
+.first-page-signup {
+  margin: 50px;
+}
+
+.back-btn {
+  margin-left: 25px;
+}
+

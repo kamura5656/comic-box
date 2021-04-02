@@ -1,9 +1,7 @@
 .top-page-header {
   height: 80px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-color: darkkhaki;
+  background-color:#B38867;
 }
 
 .logout {
@@ -13,12 +11,52 @@
 
 .login {
   text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
   color: #333333;
+  margin-right: 3vw;
+}
+
+.title-logo-space {
+  overflow-y: auto;
+}
+
+.title-logo-btn {
+  text-decoration: none;
+  color: black;
+  font: bold 20px serif;
+  font-size: 60px;
 }
 
 .sign-up {
   text-decoration: none;
   color: #333333;
+}
+
+.title-logo-space {
+  width: calc(100vw - 350px);
+  justify-content: center;
+  align-items: center;
+}
+
+.login-space {
+  width: 230px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.login-li {
+  display: flex;
+}
+
+.login-lists {
+  display: flex;
+  list-style: none;
+  margin-right: 3vw;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
 }

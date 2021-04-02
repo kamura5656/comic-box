@@ -1,6 +1,8 @@
 class Box < ApplicationRecord
   belongs_to :user
-  belongs_to :comic 
+  belongs_to :comic
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :statu, optional: true
 
 
   def self.search(search)

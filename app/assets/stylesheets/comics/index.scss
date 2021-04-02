@@ -1,14 +1,12 @@
 .all-contents {
   display: flex;
   box-sizing: border-box;
+  background-color:#CDCDC0;
 }
 
 .comic-img {
   width: 150px;
   height: 150px;
-}
-
-.central-contents {
 }
 
 .main-contents {
@@ -23,37 +21,96 @@
   flex-wrap: wrap;
 }
 
-
 .logo-space {
   width: 120px;
   height: 80px;
-  background-color: coral;
+  background-color:#B38867;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-lists {
-  display: flex;
-  list-style: none;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
+.comic-icon {
+  width: 100px;
+  height: 100px;
 }
 
 .sidebar-contents {
-  background-color: brown;
+  background-color:#DDBC95;
   width: 120px;
   height: calc(100vh - 160px);
+  flex-direction: column;
+  color: black;
+
 }
 
 .side-footer {
-  background-color: cornflowerblue;
+  background-color:#B38867;
   height: 80px;
 }
+
+.comics-add-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2vh 0 0 2vw;
+}
+
+.comic-contents {
+  border: 1px solid dimgray;
+  box-shadow: 1px
+}
+
+.serch-form-space {
+  padding: 20px;
+}
+
+.sidebar-link {
+  padding: 5px 15px;
+  font-style: italic;
+  font-size: large;
+  text-decoration: none;
+}
+
+.sidebar-btn {
+  text-decoration: none;
+  border-bottom:1px solid #333333 ;
+}
+
+.sidebar-btn-text {
+  color: black;
+  text-decoration: none;
+}
+
+.volume-text[type="number"] {
+    width: 30px;
+    height: 20px;
+}
+
+.comic-infomation a {
+  text-decoration: none;
+  color:black;
+}
+
+.comic-info a {
+  text-decoration: none;
+  color:black;
+}
+
+.comics-add-title {
+  font-size: larger;
+  border-bottom: #333333 solid 1px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.weight-bold-text {
+  padding: 5px;
+}
+
+.list {
+  background-color: white;
+}
+
+

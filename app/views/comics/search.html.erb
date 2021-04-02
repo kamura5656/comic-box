@@ -4,19 +4,23 @@
     <%= render "shared/header" %>
     <div class='main-contents'>
 
-      <%= form_with model: @comic, url: search_comics_path, local: true, method: :get, class: "search-form" do |form| %>
-        <%= form.text_field :keyword, placeholder: "題または作者名を入力", class: "search-input" %>
-        <%= form.submit "検索", class: "search-btn" %>
-      <% end %>
+      <h2 class="comics-add-title">漫画を探す</h2>
+      <div class='serch-form-space'>
+        <%= form_with model: @comic, url: search_comics_path, local: true, method: :get, class: "search-form" do |form| %>
+          <%= form.text_field :keyword, placeholder: "題または作者名を入力", class: "search-input", size: 40 %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
+      </div>
 
       <%# <%= form_with model: @box, url: boxes_path, local: true, method: :post, class: "search-form" do |form| %> 
+      <div class='main-contents-shere'>
         <ul class="list-comic">
           <% @comics.each do |comic| %>
             <%= render partial: "comics/comic", locals: { comic: comic } %>
           <% end %>
-          <%# <%= form.check_box :comic_id, {}, @comic.id, :nil %> 
         </ul>
-      <%# <%= form.submit "まとめて追加", class: "search-btn" %>  
+      </div>
+      <%# <%= form.submit "まとめて追加", class: "search-btn"  %> 
       <%# <% end  %> 
 
 
