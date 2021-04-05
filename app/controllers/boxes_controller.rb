@@ -3,7 +3,7 @@ class BoxesController < ApplicationController
     @boxes = Box.all.order('created_at DESC')
     @comics = Comic.all.order('created_at DESC')
   end
- 
+
   def new
     @box = Box.new
     @comics = Comic.all.order('created_at DESC')
@@ -44,13 +44,11 @@ class BoxesController < ApplicationController
 
   private
 
-  def box_params   
+  def box_params
     params.permit(:comic_id).merge(user_id: current_user.id)
   end
 
   def comment_params
     params.require(:box).permit(:comment)
   end
-
 end
-

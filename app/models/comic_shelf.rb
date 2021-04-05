@@ -11,9 +11,6 @@ class ComicShelf
 
   def save
     comic = Comic.create(title: title, author: author, volume: volume, image: image)
-    if user_ids.present?
-      Box.create(comic_id: comic.id, user_id: user_ids, status_id: status_id)
-    else
-    end
+    Box.create(comic_id: comic.id, user_id: user_ids, status_id: status_id) if user_ids.present?
   end
 end

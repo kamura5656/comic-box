@@ -27,6 +27,7 @@ class ComicsController < ApplicationController
   end
 
   private
+
   def params_find
     @comic = Comic.find(params[:id])
   end
